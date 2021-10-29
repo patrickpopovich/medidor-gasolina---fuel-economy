@@ -17,15 +17,18 @@ while unidad_elegida == False:
         else:
                 print("Debes elegir millas o kilómetros")
 
-if unidad == 1:
-        gasolina_litros = input("¿Cuántos litros de combustible colocaste en este momento? ")
-        kilometros_litro = float(kilometraje) / float(gasolina_litros)
-        print("El promedio de economía de combustible es de " +  str("{0:.2f}".format(kilometros_litro)) + " Kilómetros por Litro.")
+        if unidad == 1:
+                gasolina_litros = input("¿Cuántos litros de combustible colocaste en este momento? ")
+                kilometros_litro = float(kilometraje) / float(gasolina_litros)
+                print("El promedio de economía de combustible es de " +  str("{0:.2f}".format(kilometros_litro)) + " Kilómetros por Litro.")
 
-if unidad == 2:
-        gasolina_galones = input("¿Cuántos galones de combustible colocaste en este momento? ")
-        millas_galon = float(millaje) / float(gasolina_galones)
-        print("El promedio de economía de combustible es de " +  str("{0:.2f}".format(millas_galon)) + " Millas por galón.")
+        if unidad == 2:
+                gasolina_galones = input("¿Cuántos galones de combustible colocaste en este momento? ")
+                millas_galon = float(millaje) / float(gasolina_galones)
+                print("El promedio de economía de combustible es de " +  str("{0:.2f}".format(millas_galon)) + " Millas por galón.")
 
-input("¿Deseas hacer una nueva medición? S / N): ").upper()
+        volver = str(input("¿Deseas hacer una nueva medición? S / N): ").upper())
+
+        if volver == "S":
+                unidad_elegida = False
         
