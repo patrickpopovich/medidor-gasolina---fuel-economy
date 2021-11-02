@@ -6,16 +6,20 @@ while unidad_elegida == False:
         unidad =int(input("Presiona 1 para Kilómetros o 2 para Millas: "))
 
         if unidad == 1:
-                kilometraje = input("¿Cuántos kilómetros recorriste desde el último tanque lleno? ")
+                # kilometraje = 0
+                try:
+                        kilometraje = float(input("¿Cuántos kilómetros recorriste desde el último tanque lleno? "))
+                except Exception as e:  
+                        print("Error puto")
+                        continue
                 unidad_elegida = True
-                
         elif unidad == 2:
-                millaje = input("¿Cuántas millas recorriste desde el último tanque lleno? ")
-                unidad_elegida = True
+                        millaje = input("¿Cuántas millas recorriste desde el último tanque lleno? ")
+                        unidad_elegida = True
                 
                 
         else:
-                print("Debes elegir millas o kilómetros")
+                 print("Debes elegir millas o kilómetros")
 
         if unidad == 1:
                 gasolina_litros = input("¿Cuántos litros de combustible colocaste en este momento? ")
